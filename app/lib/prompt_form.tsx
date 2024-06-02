@@ -12,12 +12,8 @@ const PromptForm = () => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      const res = await generateResponse(prompt);
-      setResponse(res);
-    } catch (error) {
-      setResponse(`Error: ${error.message}`);
-    }
+    const res = await generateResponse(prompt);
+    setResponse(res);
 
     setLoading(false);
   };
