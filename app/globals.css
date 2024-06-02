@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ensure these custom properties are not overriding TailwindCSS styles */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,7 +17,8 @@
   }
 }
 
-body {
+/* Only apply custom styles if TailwindCSS classes are not present */
+body.custom-gradient {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
