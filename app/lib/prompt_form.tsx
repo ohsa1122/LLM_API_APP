@@ -5,7 +5,7 @@ import generateResponse from '@/app/lib/generate_response';
 
 const PromptForm = () => {
   const [prompt, setPrompt] = useState('');
-  const [response, setResponse] = useState('');
+  const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
